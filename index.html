@@ -9,11 +9,12 @@
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
+            min-height: 100vh;
             background-color: #f7d788; /* A warm sandy color to match the poster edges */
             font-family: 'Arial', sans-serif;
             display: flex;
             justify-content: center;
+            align-items: center;
         }
 
         /* Container to keep the poster looking good on desktop and mobile */
@@ -21,13 +22,13 @@
             position: relative;
             width: 100%;
             max-width: 600px; /* Prevents it from getting too wide on desktop */
-            height: 100vh;
+            aspect-ratio: 9 / 16;
+            min-height: 600px;
             background-image: url('background.jpg'); /* Make sure your image is named this! */
             background-size: cover;
             background-position: center top;
             background-repeat: no-repeat;
             box-shadow: 0 0 20px rgba(0,0,0,0.2);
-            min-width: 600px;
         }
 
         /* Button container to position it at the bottom */
@@ -37,6 +38,8 @@
             width: 100%;
             display: flex;
             justify-content: center;
+            padding: 0 20px;
+            box-sizing: border-box;
         }
 
         /* The Register Button Styling */
@@ -55,6 +58,7 @@
             cursor: pointer;
             text-align: center;
             letter-spacing: 1px;
+            white-space: nowrap;
         }
 
         /* Hover effect for when someone mouses over the button */
@@ -64,11 +68,59 @@
             transform: translateY(-3px);
         }
 
-        /* Responsive adjustment for smaller phones */
-        @media (max-width: 400px) {
+        /* Responsive adjustment for tablets and smaller tablets */
+        @media (max-width: 768px) {
+            .landing-container {
+                min-height: auto;
+            }
+
+            .register-btn {
+                font-size: 20px;
+                padding: 14px 35px;
+            }
+        }
+
+        /* Responsive adjustment for medium phones */
+        @media (max-width: 600px) {
             .register-btn {
                 font-size: 18px;
                 padding: 12px 30px;
+            }
+        }
+
+        /* Responsive adjustment for smaller phones */
+        @media (max-width: 400px) {
+            .landing-container {
+                aspect-ratio: auto;
+                min-height: 100vh;
+            }
+
+            .register-btn {
+                font-size: 16px;
+                padding: 10px 25px;
+                letter-spacing: 0.5px;
+            }
+
+            body, html {
+                align-items: flex-start;
+                padding-top: 20px;
+            }
+        }
+
+        /* Responsive adjustment for very small devices */
+        @media (max-width: 320px) {
+            .register-btn {
+                font-size: 14px;
+                padding: 8px 20px;
+                border: 3px solid #ffffff;
+            }
+        }
+
+        /* Prevent zooming on mobile hover */
+        @media (hover: none) {
+            .register-btn:active {
+                background-color: #e64a19;
+                box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
             }
         }
     </style>
