@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Violin Classes for Kids!</title>
+    <style>
+        /* Base page styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #f7d788; /* A warm sandy color to match the poster edges */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Container to keep the poster looking good on desktop and mobile */
+        .landing-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* Prevents it from getting too wide on desktop */
+            height: 100vh;
+            background-image: url('background.jpg'); /* Make sure your image is named this! */
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+
+        /* Button container to position it at the bottom */
+        .button-wrapper {
+            position: absolute;
+            bottom: 5%; /* Adjust this percentage to move the button up or down */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* The Register Button Styling */
+        .register-btn {
+            background-color: #ff5722; /* Vibrant orange */
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 16px 40px;
+            border-radius: 50px;
+            border: 4px solid #ffffff;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        /* Hover effect for when someone mouses over the button */
+        .register-btn:hover {
+            background-color: #e64a19;
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive adjustment for smaller phones */
+        @media (max-width: 400px) {
+            .register-btn {
+                font-size: 18px;
+                padding: 12px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="landing-container">
+        <div class="button-wrapper">
+            <a href="https://forms.gle/cYp4ruhg9pib3Cz96" target="_blank" class="register-btn">
+                Click Here to Register!
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
